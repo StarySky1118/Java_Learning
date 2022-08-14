@@ -1,0 +1,25 @@
+package com.zzy.string01;
+
+// 演示String对象的创建机制
+public class Test02 {
+    public static void main(String[] args) {
+//        String s1 = "hello";
+//        String s2 = "world";
+//        String s = s1 + s2;
+//        System.out.println(s == "helloworld");
+
+        T1 t1 = new T1();
+        t1.change(t1.str, t1.chars);
+        System.out.print(t1.str + " and ");
+        System.out.println(t1.chars);
+    }
+}
+
+class T1 {
+    String str = "hsp";
+    final char[] chars = {'j', 'a', 'v', 'a'};
+    public void change(String str, char[] chars) {
+        this.str = "java";
+        chars[0] = 'h';
+    }
+}
